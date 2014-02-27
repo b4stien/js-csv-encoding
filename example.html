@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="encoding-indexes.js"></script>
+    <script type="text/javascript" src="encoding.js"></script>
+    <script type="text/javascript" src="fileSaver.js"></script>
+</head>
+
+<body>
+    <a href="#" id="download-csv">Click me to download a valid CSV !</a>
+
+    <script type="text/javascript">
+        var csvContent = 'éà; ça; 12\nà@€; çï; 13';
+        var textEncoder = new TextEncoder('windows-1252');
+
+        var a = document.getElementById('download-csv');
+        a.addEventListener('click', function(e) {
+            var csvContentEncoded = textEncoder.encode([csvContent]);
+            blob = new Blob([csvContentEncoded], {type: 'text/csv;charset=windows-1252;'});
+            saveAs(blob, 'douze-le-csv-deux.csv');
+            e.preventDefault();
+        });
+    </script>
+</body>
+
+</html>
