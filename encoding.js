@@ -2192,9 +2192,7 @@
     options = Object(options);
     /** @private */
     this._encoding = getEncoding(opt_encoding);
-    if (this._encoding === null || (this._encoding.name !== 'utf-8' &&
-                                    this._encoding.name !== 'utf-16le' &&
-                                    this._encoding.name !== 'utf-16be'))
+    if (this._encoding === null)
       throw new TypeError('Unknown encoding: ' + opt_encoding);
     /** @private @type {boolean} */
     this._streaming = false;
