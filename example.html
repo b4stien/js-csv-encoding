@@ -12,14 +12,15 @@
     <a href="#" id="download-csv">Click me to download a valid CSV !</a>
 
     <script type="text/javascript">
-        var csvContent = 'éà; ça; 12\nà@€; çï; 13';
-        var textEncoder = new TextEncoder('windows-1252');
+        var csvContent = 'éà; ça; 12\nà@€; çï; 13',
+            textEncoder = new TextEncoder('windows-1252'),
+            fileName = 'some-data.csv';
 
         var a = document.getElementById('download-csv');
         a.addEventListener('click', function(e) {
             var csvContentEncoded = textEncoder.encode([csvContent]);
             var blob = new Blob([csvContentEncoded], {type: 'text/csv;charset=windows-1252;'});
-            saveAs(blob, 'douze-le-csv-deux.csv');
+            saveAs(blob, fileName);
             e.preventDefault();
         });
     </script>
