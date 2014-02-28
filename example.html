@@ -18,7 +18,7 @@
         var a = document.getElementById('download-csv');
         a.addEventListener('click', function(e) {
             var csvContentEncoded = textEncoder.encode([csvContent]);
-            blob = new Blob([csvContentEncoded], {type: 'text/csv;charset=windows-1252;'});
+            var blob = new Blob([csvContentEncoded], {type: 'text/csv;charset=windows-1252;'});
             saveAs(blob, 'douze-le-csv-deux.csv');
             e.preventDefault();
         });
