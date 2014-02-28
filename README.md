@@ -1,5 +1,5 @@
-How to create a windows-1252 CSV in JS
-======================================
+How to create a windows-1252 CSV
+================================
 
 Microsoft Excel will open all CSV files with the windows-1252 encoding (also
 called 'ansi'). Under certain circomstances (Microsoft Excel >= 2007 on
