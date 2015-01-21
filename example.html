@@ -13,7 +13,7 @@
 
     <script type="text/javascript">
         var csvContent = 'éà; ça; 12\nà@€; çï; 13',
-            textEncoder = new TextEncoder('windows-1252'),
+            textEncoder = new CustomTextEncoder('windows-1252', {NONSTANDARD_allowLegacyEncoding: true}),
             fileName = 'some-data.csv';
 
         var a = document.getElementById('download-csv');
