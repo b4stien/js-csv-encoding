@@ -9,7 +9,7 @@ You can find in this repository an example of how to generate a CSV encoded in
 windows-1252 directly in the browser. This example depends on two external
 projects:
 
-  * [stringencoding](https://code.google.com/p/stringencoding/) - a JS shim to implement http://encoding.spec.whatwg.org/#api
+  * [stringencoding](https://github.com/inexorabletash/text-encoding) - a JS shim to implement http://encoding.spec.whatwg.org/#api
   * [FileSaver.js](https://github.com/eligrey/FileSaver.js) - a JS library to save Blob as file
 
 
